@@ -1,0 +1,22 @@
+<h1>Send Drew a text message!</h1>
+<img src="http://m.c.lnkd.licdn.com/mpr/pub/image-W7ZiocGdP4a07Up_C-jrES-IRNVHwdwRg6ZfE13WRU6JYEMvW7ZfZzfdRmhPYvzgA2dc/drew-seminara.jpg" class="left" />
+<% if @message.errors.any? %>
+  <h2>Form is invalid</h2>
+    <ul>
+      <% @message.errors.full_messages.each do |m| %>
+      <li><%= m %></li>
+      <% end %>
+    </ul>
+<% end %>
+
+<%= form_for @message do |f|%>
+<%= f.hidden_field :to, value: '8085541073' %>
+<%= f.hidden_field :from, value: '3212340940' %>
+<br />
+
+<%= f.label 'your message:' %><br>
+<%= f.text_area :body %><br>
+
+<%= f.submit "send" %>
+<% end %>
+

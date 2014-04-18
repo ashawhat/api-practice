@@ -13,6 +13,7 @@ gem 'bootstrap-sass'
 gem 'bootstrap-sass-extras'
 gem 'email_validator'
 gem 'devise'
+gem 'rest-client'
 
 group :development do
   gem 'better_errors'
@@ -27,6 +28,7 @@ group :test, :development do
   gem 'launchy'
   gem 'capybara'
   gem 'faker'
+  gem 'dotenv-rails'
 end
 
 group :test do
