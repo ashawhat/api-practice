@@ -1,0 +1,15 @@
+
+default: &default
+  adapter: postgresql
+  encoding: unicode
+
+
+development:
+  <<: *default
+  database: api_tester_development
+
+
+test:
+  <<: *default
+  database: api_tester_test
+
